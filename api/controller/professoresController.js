@@ -11,14 +11,14 @@ const getByEmail = async (req, res) => {
   }
 };
 
-// const getAll = async (req, res) => {
-//   try {
-//     const professores = await professoresService.getAll();
-//     res.json(professores);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: 'Erro ao buscar os professores.' });
-//   }
-// };
+const getAll = async (req, res) => {
+  try {
+    const professores = await professoresService.getAll();
+    res.json(professores);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Erro ao buscar os professores.' });
+  }
+};
 
-export default getByEmail;
+export {getAll, getByEmail};

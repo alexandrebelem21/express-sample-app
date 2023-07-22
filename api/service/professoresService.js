@@ -1,6 +1,6 @@
-// const { Usuario, Curso, Materia, Aula } = require('../../database/models');
+import usuariosModel from '../../database/models/usuarios.js';
 
-// const getAll = () => Usuario.findAll();
+const getAll = () => usuariosModel.findAll();
 
 const getByEmail = async (email) => {
   console.log('olaa', email);
@@ -37,4 +37,4 @@ const getByEmail = async (email) => {
   // }
 };
 
-export default getByEmail;
+export default {getByEmail, getAll};
