@@ -1,8 +1,8 @@
 import usuariosModel from '../../database/models/usuarios.js';
 
-const getAll = () => usuariosModel.findAll();
+const getAllSs = () => usuariosModel.findAll();
 
-const getByEmail = async (email) => {
+const getByEmailS = async (email) => {
   console.log('olaa', email);
   // try {
   //   const usuario = await Usuario.findOne({
@@ -37,4 +37,4 @@ const getByEmail = async (email) => {
   // }
 };
 
-export default {getByEmail, getAll};
+export default {getByEmailS, getAllSs};
