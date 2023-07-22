@@ -1,11 +1,11 @@
-import express from 'express';
-import cors from 'cors';
-import router from './api/routes/professoresRouter.js'
+const express = require('express');
+const cors = require('cors');
+const router = require('./api/routes/professoresRouter');
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-// console.log(teste);
 app.use('/professor', router); // Registra as rotas do módulo professoresRouter
 
 const port = process.env.PORT || 3000;

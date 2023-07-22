@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "a simple expressjs app",
   "main": "index.js",
-  "type": "module",
   "author": "Brody Over",
   "license": "MIT",
   "scripts": {
@@ -16,6 +15,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "mysql2": "^3.5.2"
+    "mysql2": "^3.5.2",
+    "sequelize": "^6.32.1"
   }
 }

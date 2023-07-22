@@ -1,4 +1,4 @@
-const usuariosModel = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
   const Usuario = sequelize.define(
     'Usuario',
     {
@@ -17,20 +17,18 @@ const usuariosModel = (sequelize, DataTypes) => {
     {
       timestamps: false,
       underscored: true,
-      tableName: 'usuarios',
+      tablename: 'usuarios',
     },
   );
 
-  Usuario.associate = (models) => {
-    Usuario.hasMany(models.Curso, {
-      foreignKey: 'usuario_id',
-      as: 'cursos',
-      tableName: 'cursos',
-      onDelete: 'CASCADE',
-    });
-  };
+  // Usuario.associate = (models) => {
+  //   Usuario.hasMany(models.Curso, {
+  //     foreignKey: 'usuario_id', // Coluna que armazena a chave estrangeira na tabela "Usuario"
+  //     as: 'cursos', // Alias para a associação (opcional)
+  //     tablename: 'cursos',
+  //     onDelete: 'CASCADE',
+  //   });
+  // };
 
   return Usuario;
 };
-
-export default usuariosModel;

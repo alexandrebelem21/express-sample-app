@@ -1,10 +1,23 @@
-import express from 'express';
-import  { getAll} from '../controller/professoresController.js';
-// import validateToken from '../middlewares/validateToken';
+// const express = require('express');
+// const professoresController = require('../controller/professoresController');
+// // const validateToken = require('../middlewares/validateToken');
+
+// const professoresRouter = express.Router();
+
+// // professoresRouter.get('/', validateToken, professoresController.getAll);
+// professoresRouter.get('/:email', professoresController.getByEmail);
+// // professoresRouter.post('/', validateToken, professoresController.create);
+
+// module.exports = professoresRouter;
+
+
+const express = require('express');
+const professoresController = require('../controller/professoresController');
+// const validateToken = require('../middlewares/validateToken');
 
 const router = express.Router();
 
-router.get('/', getAll);
-// router.get('/:email', getByEmail);
+router.get('/', professoresController.getAll);
+router.get('/:email', professoresController.getByEmail);
 
-export default router;
+module.exports = router;
